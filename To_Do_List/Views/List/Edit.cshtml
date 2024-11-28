@@ -1,0 +1,22 @@
+﻿@model ToDoList
+
+<h1> <a href="/List/Item"><i class="bi bi-arrow-left"></i></a> Edit Item</h1>
+<form action="/List/EditItem">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" value="@Model.Title" name="Title" placeholder="Tite">
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" value="@Model.Description" name="Description" placeholder="Description">
+    </div>
+    <div class="form-group">
+        <label for="DeadLine">DeadLine</label>
+        <input type="datetime-local" class="form-control" id="DeadLine" value="@Model.DeadLine" name="DeadLine" placeholder="DeadLine">
+    </div>
+    <div class="form-group">
+        
+        <input type="hidden" class="form-control" id="Id" value="@Model.Id" name="Id" >
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Save</button>
+</form>
