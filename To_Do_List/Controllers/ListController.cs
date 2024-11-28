@@ -59,17 +59,6 @@ namespace To_Do_List.Controllers
             return RedirectToAction(nameof(Item));
         }
         
-        public IActionResult setCookie()
-        {
-            CookieOptions cookieOptions = new CookieOptions();
-            cookieOptions.Expires = DateTimeOffset.Now.AddDays(1); 
-            Response.Cookies.Append("name","mohamed", cookieOptions);
-            return Content("cookie saved");
-        }
-        public IActionResult getCookie()
-        {
-            
-            return Content(Request.Cookies["name"]);
-        }
+        
     }
 }

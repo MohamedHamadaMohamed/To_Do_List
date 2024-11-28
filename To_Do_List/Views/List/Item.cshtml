@@ -21,7 +21,7 @@
                 <td>@item.Title</td>
                 <td>@item.Description</td>
                 <td>@item.DeadLine</td>
-                <td><a href="/List/Edit?Id=@item.Id" class="btn btn-outline-info">Edit</a> <a href="/List/Remove?Id=@item.Id" class="btn btn-outline-info">Delete</a></td>
+                <td><a href="/List/Edit?Id=@item.Id" class="btn btn-outline-info">Edit</a> <a href="/List/Remove?Id=@item.Id" onclick="return confirm('are you sure?')" class="btn btn-outline-info">Delete</a></td>
             </tr>
         }
         
